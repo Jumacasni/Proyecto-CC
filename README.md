@@ -1,7 +1,5 @@
 # Terrake
 
-Proyecto de la asignatura Cloud Computing del Máster en Ingeniería Informática en la Universidad de Granada, curso 2020-2021
-
 La configuración correcta del entorno de Git y Github en mi máquina local se puede encontrar [aquí](https://github.com/Jumacasni/Proyecto-CC/blob/main/docs/configuracion_git.md).
 
 ## Descripción del proyecto
