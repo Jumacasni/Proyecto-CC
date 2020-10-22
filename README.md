@@ -4,7 +4,7 @@ La configuración correcta del entorno de Git y Github en mi máquina local se p
 
 ## Descripción del proyecto
 
-La descripción de este proyecto se puede consultar en [este enlace](https://github.com/Jumacasni/Terrake/blob/main/docs/descripcion_proyecto.md)
+La descripción de este proyecto se puede consultar en [este enlace](https://github.com/Jumacasni/Terrake/blob/main/docs/descripcion_proyecto.md).
 
 
 ## Arquitectura
@@ -32,3 +32,7 @@ Se tienen en cuenta las siguientes consideraciones:
 * Cada vez que se detecte un nuevo terremoto, se debe almacenar en la base de datos y publicar dicha información tanto en Twitter como en Telegram.
 * Se hará un análisis semanal cuyo resultado se publicará tanto en Twitter como en Telegram.
 * Se desarrollará una API REST para la comunicación entre los distintos microservicios y la API Gateway.
+
+## Licencia
+
+El código de este repositorio está bajo la licencia [GPLv3](./LICENSE).
