@@ -33,6 +33,10 @@ Se tienen en cuenta las siguientes consideraciones:
 * Se hará un análisis semanal cuyo resultado se publicará tanto en Twitter como en Telegram.
 * Se desarrollará una API REST para la comunicación entre los distintos microservicios y la API Gateway.
 
+### Lenguaje
+
+Tal y como se ha mencionado en la explicación de los microservicios, este proyecto se va a realizar en **Node.js**.
+
 ### Bases de datos
 
 - **Terremotos:** contiene todos los terremotos que van apareciendo en el catálogo de terremotos del IGN.
