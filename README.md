@@ -33,6 +33,11 @@ Se tienen en cuenta las siguientes consideraciones:
 * Se hará un análisis semanal cuyo resultado se publicará tanto en Twitter como en Telegram.
 * Se desarrollará una API REST para la comunicación entre los distintos microservicios y la API Gateway.
 
+#### Bases de datos
+
+**Terremotos:** contiene todos los terremotos que van apareciendo en el catálogo de terremotos del IGN.
+**Terremotos reportados**: contiene todos los terremotos que los usuarios de Telegram van reportando
+
 ## Licencia
 
 El código de este repositorio está bajo la licencia [GPLv3](./LICENSE).
