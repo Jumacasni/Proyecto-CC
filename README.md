@@ -36,7 +36,8 @@ Se tienen en cuenta las siguientes consideraciones:
 ### Bases de datos
 
 - **Terremotos:** contiene todos los terremotos que van apareciendo en el catálogo de terremotos del IGN.
-- **Terremotos reportados**: contiene todos los terremotos que los usuarios de Telegram van reportando.
+- **Terremotos reportados:** contiene todos los terremotos que los usuarios de Telegram van reportando.
+- **Usuarios:** usuarios de Telegram que han iniciado el bot.
 
 ## Licencia
 
