@@ -2,4 +2,3 @@ entidad:
   - src/terremoto.js
   - src/terremoto_reportado.js
   - src/usuario.js
-  
