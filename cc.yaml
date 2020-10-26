@@ -1,3 +1,4 @@
-entidad: src/terremoto.js
-entidad: src/terremoto_reportado.js
-entidad: src/usuario.js
+entidad:
+  - src/terremoto.js
+  - src/terremoto_reportado.js
+  - src/usuario.js
