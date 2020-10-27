@@ -43,7 +43,7 @@ Tal y como se ha mencionado en la explicación de los microservicios, este proye
 - **Terremotos reportados:** contiene todos los terremotos que los usuarios de Telegram van reportando.
 - **Usuarios:** usuarios de Telegram que han iniciado el bot.
 
-## Planificación del proyecto
+## Planificación del proyecto (ROADMAP)
 
 La planificación del proyecto se puede ver en [este enlace](https://github.com/Jumacasni/Terrake/projects/1).
 
