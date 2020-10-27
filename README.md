@@ -47,6 +47,16 @@ Tal y como se ha mencionado en la explicación de los microservicios, este proye
 
 La planificación del proyecto se puede ver en [este enlace](https://github.com/Jumacasni/Terrake/projects/1).
 
+### Historias de Usuario
+
+- [[HU1] Consulta de terremotos a través de Twitter](https://github.com/Jumacasni/Terrake/issues/9)
+- [[HU2] Notificación de terremotos a través de Telegram](https://github.com/Jumacasni/Terrake/issues/10)
+- [[HU3] Consulta de terremotos a través de Telegram](https://github.com/Jumacasni/Terrake/issues/11)
+- [[HU4] Reportar un terremoto a través de Telegram ](https://github.com/Jumacasni/Terrake/issues/12)
+- [[HU5] Consultar terremotos reportados recientemente en Telegram](https://github.com/Jumacasni/Terrake/issues/13)
+- [[HU6] Visualización gráfica de terremotos a través de Telegram](https://github.com/Jumacasni/Terrake/issues/14)
+- [[HU7] Dar de baja notificaciones de nuevos terremotos en Telegram](https://github.com/Jumacasni/Terrake/issues/17)
+
 ## Clases creadas
 
 Se han creado las siguientes clases:
