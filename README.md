@@ -20,15 +20,9 @@ Esta arquitectura encaja muy bien en este proyecto porque se quiere tener distin
 * **Gestión del análisis de datos**
 * **Gestión de las notificaciones**
 
-### Lenguaje
+### Herramientas
 
-Tal y como se ha mencionado en la explicación de los microservicios, este proyecto se va a realizar en **Node.js**.
-
-### Bases de datos
-
-- **Terremotos:** contiene todos los terremotos que van apareciendo en el catálogo de terremotos del IGN.
-- **Terremotos reportados:** contiene todos los terremotos que los usuarios de Telegram van reportando.
-- **Usuarios:** usuarios de Telegram que han iniciado el bot.
+* **Lenguaje:** en un principio se pensó *Node.js* por la experiencia que tengo en este lenguaje, pero finalmente se va a realizar en **Go** ya que nunca he tenido la oportunidad de aprenderlo y este proyecto es el momento para hacerlo.
 
 ## Planificación del proyecto (ROADMAP)
 
