@@ -9,7 +9,7 @@ La descripción de este proyecto se puede consultar en [este enlace](https://git
 ## Arquitectura
 
 Este proyecto se va a desarrollar usando una arquitectura basada en microservicios. Se ha elegido esta arquitectura porque nos permite diferenciar entre distintos microservicios que ofrecen funcionalidades independientes. Por ejemplo, la **la gestión de la base de datos** en la que se van almacenando todos los terremotos registrados forma un microservicio, y la **gestión de consultas de terremotos** forma otro microservicio independiente que sirve para gestionar todas las consultas que realicen los usuarios, comunicándose ambos servicios mediante una API. Esta arquitectura presenta las siguientes ventajas (poniendo como ejemplo los dos microservicios mencionados):
-* Si el microservicio de las consultas falla, eso no implica que el microservicio que gestiona la base de datos deje de funcionar
+* Si el microservicio de las consultas falla, eso no implica que el microservicio que gestiona la base de datos deje de funcionar. Va a seguir cogiendo datos de terremotos y metiéndolos en la base de datos.
 * Implementar una nueva funcionalidad en la gestin de consultas seria mucho más fácil puesto que ambos microservicios no comparten un mismo fichero, si no que cada uno tiene el suyo propio y es mucho más limpio y ordenado incluir nuevas funcionalidades.
 * Cada microservicio se escala de forma totalmente independiente de los demás.
 
