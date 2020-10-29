@@ -25,19 +25,41 @@ Esta arquitectura encaja muy bien en este proyecto porque se quiere tener distin
 
 * **Lenguaje:** en un principio se pensó *Node.js* por la experiencia que tengo en este lenguaje, pero finalmente se va a realizar en **Go** ya que nunca he tenido la oportunidad de aprenderlo y este proyecto es el momento para hacerlo.
 
-## Planificación del proyecto (ROADMAP)
+## Planificación del proyecto
 
-La planificación del proyecto se puede ver en [este enlace](https://github.com/Jumacasni/Terrake/projects/1).
+El desarrollo de este proyecto se va a dividr en las siguientes fases:
 
-### Historias de Usuario
+### Primera fase
 
-- [[HU1] Consulta de terremotos a través de Twitter](https://github.com/Jumacasni/Terrake/issues/9)
-- [[HU2] Notificación de terremotos a través de Telegram](https://github.com/Jumacasni/Terrake/issues/10)
-- [[HU3] Consulta de terremotos a través de Telegram](https://github.com/Jumacasni/Terrake/issues/11)
-- [[HU4] Reportar un terremoto a través de Telegram ](https://github.com/Jumacasni/Terrake/issues/12)
-- [[HU5] Consultar terremotos reportados recientemente en Telegram](https://github.com/Jumacasni/Terrake/issues/13)
-- [[HU6] Visualización gráfica de terremotos a través de Telegram](https://github.com/Jumacasni/Terrake/issues/14)
-- [[HU7] Dar de baja notificaciones de nuevos terremotos en Telegram](https://github.com/Jumacasni/Terrake/issues/17)
+En esta primera fase se van a construir algunas funcionalidades de la gestión de consultas de terremotos. Para ello, se creará la interfaz de la entidad principal **terremoto**. Durante esta fase se van a construir las funcionaliades básicas que contribuyen a la gestión de consultas mediante las siguientes historias de usuario:
+
+* [[HU1] Consulta de terremotos en los últimos X días/meses/años](https://github.com/Jumacasni/Terrake/issues/29)
+* [[HU2] Consulta de terremotos por filtros](https://github.com/Jumacasni/Terrake/issues/30)
+* [[HU4] Consulta de un análisis de datos](https://github.com/Jumacasni/Terrake/issues/32)
+
+### Segunda fase
+
+En esta segunda fase se pretende distinguir entre usuarios anónimos (no registrados) y registrados. Para ello, se crear la interfaz de la entidad **usuario**. Un usuario registrado puede recibir notificaciones de terremotos y además eliminar reportes de terremotos que haya hecho por error o por cualquier otro motivo. En concreto, en esta fase se crearán las funcionalidades que recogen las siguientes historias de usuario:
+
+* [[HU7] Registrar usuario](https://github.com/Jumacasni/Terrake/issues/35)
+* [[HU10] Activar notificaciones de terremotos](https://github.com/Jumacasni/Terrake/issues/38)
+* [[HU11] Restringir las notificaciones recibidas](https://github.com/Jumacasni/Terrake/issues/39)
+
+### Tercera fase
+
+En esta tercera fase se completarán las funcionalidades adicionales que faltaban en la segunda fase. Se pretende añadir estas funcionalidades una vez funcione todo lo creado en la fase anterior, puesto que lo que hacen es complementar a las ya creadas. Esta fase recoge las siguientes historias de usuario:
+
+* [[HU8] Modificar cuenta de usuario](https://github.com/Jumacasni/Terrake/issues/36)
+* [[HU9] Eliminar cuenta de usuario](https://github.com/Jumacasni/Terrake/issues/37)
+* [[HU12] Desactivar las notificaciones](https://github.com/Jumacasni/Terrake/issues/40)
+
+### Cuarta fase
+
+En esta última fase de desarrollo se creará el microservicio que lleva la gestión de los reportes de terremotos. Para ello, se creará la entidad **reporte** y podrá hacerla tanto un usuario anónimo como uno registrado. Además, se añadirá una funcionalidad a la gestión de consultas que permite ver en un mapa el epicentro de un terremoto concreto. Esta fase final dará como resultado el **producto completo** con todas las funcionalidades. Las historias de usuario de esta fase son las siguientes:
+
+* [[HU5] Reportar que se ha sentido un terremoto](https://github.com/Jumacasni/Terrake/issues/33)
+* [[HU6] Eliminar el reporte de un terremoto](https://github.com/Jumacasni/Terrake/issues/34)
+* [[HU3] Visualización de un terremoto en un mapa](https://github.com/Jumacasni/Terrake/issues/31)
 
 ## Clases creadas
 
