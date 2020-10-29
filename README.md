@@ -18,8 +18,8 @@ Esta arquitectura encaja muy bien en este proyecto porque se quiere tener distin
 * **Gestión de la base de datos**
 * **Gestión de las consultas de terremotos**
 * **Gestión análisis de datos**
+* **Gestión de usuarios**
 * **Gestión del reporte de terremotos**
-* **Gestión de las notificaciones**
 
 ### Herramientas
 
