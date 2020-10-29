@@ -8,13 +8,12 @@ La descripción de este proyecto se puede consultar en [este enlace](https://git
 
 ## Arquitectura
 
-Este proyecto se va a desarrollar usando una arquitectura basada en microservicios. En esta aplicación se distinguen varias funcionalidades que pueden ser diseñadas e implementadas de forma independiente. Al contrario que una arquitectura monolítica, esta arquitectura presenta las siguientes ventajas:
-* Cada funcionalidad se separa en un **microservicio independiente**. Si un microservicio falla, no implica que todos los demás microservicios dejen de ofrecer su funcionalidad.
-* **Implementar** nuevas características o **mejorar** las ya existentes es más fácil. En una arquitectura monolítica se tendría todo el código en un mismo fichero y resultaría complejo realizar una modificación, puesto que ese fichero va a ir creciendo en cuanto a código.
-* La **comunicación** entre cada microservicio se realiza mediante un sistema de paso de mensajes de forma muy sencilla.
-* Cada microservicio se **escala** de forma totalmente independiente de los demás.
+Este proyecto se va a desarrollar usando una arquitectura basada en microservicios. Se ha elegido esta arquitectura porque nos permite diferenciar entre distintos microservicios que ofrecen funcionalidades independientes. Por ejemplo, la **la gestión de la base de datos** en la que se van almacenando todos los terremotos registrados forma un microservicio, y la **gestión de consultas de terremotos** forma otro microservicio independiente que sirve para gestionar todas las consultas que realicen los usuarios, comunicándose ambos servicios mediante una API. Esta arquitectura presenta las siguientes ventajas (poniendo como ejemplo los dos microservicios mencionados):
+* Si el microservicio de las consultas falla, eso no implica que el microservicio que gestiona la base de datos deje de funcionar
+* Implementar una nueva funcionalidad en la gestin de consultas seria mucho más fácil puesto que ambos microservicios no comparten un mismo fichero, si no que cada uno tiene el suyo propio y es mucho más limpio y ordenado incluir nuevas funcionalidades.
+* Cada microservicio se escala de forma totalmente independiente de los demás.
 
-Esta arquitectura encaja muy bien en este proyecto porque se quiere tener distintos servicios independientes que se comuniquen entre ellos. Por ejemplo, la **gestión de la base de datos** y el **análisis de datos** son dos funcionalidades que se separan en microservicios independientes. En concreto, en este proyecto encontramos los siguientes microservicios:
+En concreto, en este proyecto encontramos los siguientes microservicios:
 * **Gestión de la base de datos**
 * **Gestión de las consultas de terremotos**
 * **Gestión análisis de datos**
