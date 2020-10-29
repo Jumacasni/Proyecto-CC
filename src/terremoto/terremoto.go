@@ -11,7 +11,7 @@ type Terremoto struct {
 	latitud float64
 	longitud float64
 	profundidad int
-	magnitud floafds
+	magnitud float64
 	tipoMagnitud tipomagnitud.TipoMagnitud
 	localizacion string
 }
