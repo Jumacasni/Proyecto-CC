@@ -1,4 +1,4 @@
 entidad:
-  - src/terremoto.js
-  - src/terremoto_reportado.js
-  - src/usuario.js
+  - src/terremoto/tipomagnitud/tipomagnitud.go
+  - src/terremoto/terremoto.go
+  - src/controlador.go
