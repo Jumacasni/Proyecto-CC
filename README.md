@@ -64,8 +64,8 @@ En esta última fase de desarrollo se creará el microservicio que lleva la gest
 ## Clases creadas
 
 Se han creado las siguientes clases:
-- [tipomagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipomagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto
 - [terremoto.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/terremoto.go): se crea la clase **terremoto**, enlazada a [[HU1]](https://github.com/Jumacasni/Terrake/issues/29)
+- [tipomagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipomagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto, creado junto con la clase **terremoto** en [[HU1]](https://github.com/Jumacasni/Terrake/issues/29)
 - [controlador.go](https://github.com/Jumacasni/Terrake/blob/main/src/controlador.go): se crea la clase **controlador** para crear o destruir terremotos, enlazada a [[HU1]](https://github.com/Jumacasni/Terrake/issues/29)
 
 ## Licencia
