@@ -14,11 +14,11 @@ Este proyecto se va a desarrollar usando una arquitectura basada en microservici
 * La **comunicación** entre cada microservicio se realiza mediante un sistema de paso de mensajes de forma muy sencilla.
 * Cada microservicio se **escala** de forma totalmente independiente de los demás.
 
-Esta arquitectura encaja muy bien en este proyecto porque se quiere tener distintos servicios independientes que se comuniquen entre ellos. Por ejemplo, la gestión de la base de datos y el análisis de datos son dos funcionalidades que se separan en microservicios independientes. En concreto, en este proyecto encontramos los siguientes microservicios:
-* Gestión de la base de datos
-* Gestión de las consultas de terremotos
-* Gestión del análisis de datos
-* Gestión de las notificaciones
+Esta arquitectura encaja muy bien en este proyecto porque se quiere tener distintos servicios independientes que se comuniquen entre ellos. Por ejemplo, la **gestión de la base de datos** y el **análisis de datos** son dos funcionalidades que se separan en microservicios independientes. En concreto, en este proyecto encontramos los siguientes microservicios:
+* **Gestión de la base de datos**
+* **Gestión de las consultas de terremotos**
+* **Gestión del análisis de datos**
+* **Gestión de las notificaciones**
 
 ### Lenguaje
 
