@@ -33,7 +33,7 @@ El desarrollo de este proyecto se va a dividr en las siguientes fases:
 
 En esta primera fase se van a construir algunas funcionalidades de la gestión de consultas de terremotos. Para ello, se creará la interfaz de la entidad principal **terremoto**. Durante esta fase se van a construir las funcionaliades básicas que contribuyen a la gestión de consultas mediante las siguientes historias de usuario:
 
-* [[HU1] Consulta de terremotos en los últimos X días/meses/años](https://github.com/Jumacasni/Terrake/issues/29)
+* [[HU1] Consulta general de terremotos en los últimos X días/meses/años](https://github.com/Jumacasni/Terrake/issues/29)
 * [[HU2] Consulta de terremotos por filtros](https://github.com/Jumacasni/Terrake/issues/30)
 * [[HU4] Consulta de un análisis de datos](https://github.com/Jumacasni/Terrake/issues/32)
 
