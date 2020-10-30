@@ -22,39 +22,35 @@ Cada microservicio realiza una funcionalidad que no depende de otro pero que uni
 
 ## Planificación del proyecto
 
-El desarrollo de este proyecto se va a dividr en las siguientes fases:
+El desarrollo de este proyecto se va a dividir en las siguientes fases:
 
 ### Primera fase
 
-En esta primera fase se van a construir algunas funcionalidades de la gestión de consultas de terremotos. Para ello, se creará la interfaz de la entidad principal **terremoto**. Durante esta fase se van a construir las funcionaliades básicas que contribuyen a la gestión de consultas mediante las siguientes historias de usuario:
+En esta primera fase se va a desarrollar el *milestone* [**catálogo de terremotos**](https://github.com/Jumacasni/Terrake/milestone/3), dando como resultado el producto mínimo viable en el que los usuarios pueden realizar consultas de terremotos. La historia de usuario que cubre este *milestone* es:
 
-* [[HU1] Consulta general de terremotos en los últimos X días/meses/años](https://github.com/Jumacasni/Terrake/issues/29)
-* [[HU2] Consulta de terremotos por filtros](https://github.com/Jumacasni/Terrake/issues/30)
-* [[HU4] Consulta de un análisis de datos](https://github.com/Jumacasni/Terrake/issues/32)
+* [[HU1] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/46)
 
 ### Segunda fase
 
-En esta segunda fase se pretende distinguir entre usuarios anónimos (no registrados) y registrados. Para ello, se crear la interfaz de la entidad **usuario**. Un usuario registrado puede recibir notificaciones de terremotos y además eliminar reportes de terremotos que haya hecho por error o por cualquier otro motivo. En concreto, en esta fase se crearán las funcionalidades que recogen las siguientes historias de usuario:
+El *milestone* [**cuentas de usuario**](https://github.com/Jumacasni/Terrake/milestone/4) da como resultado final el producto mínimo viable que incluye la gestión de las cuentas de usuario. Los usuarios podrán registrarse en el sistema, además de poder modificar su información o eliminar su cuenta. Esta fase incluye las siguientes historias de usuario: 
 
-* [[HU7] Registrar usuario](https://github.com/Jumacasni/Terrake/issues/35)
-* [[HU10] Activar notificaciones de terremotos](https://github.com/Jumacasni/Terrake/issues/38)
-* [[HU11] Restringir las notificaciones recibidas](https://github.com/Jumacasni/Terrake/issues/39)
+* [[HU3] Registrar usuario](https://github.com/Jumacasni/Terrake/issues/48)
+* [[HU4] Modificar cuenta de usuario](https://github.com/Jumacasni/Terrake/issues/49)
+* [[HU5] Eliminar cuenta de usuario](https://github.com/Jumacasni/Terrake/issues/50)
 
 ### Tercera fase
 
-En esta tercera fase se completarán las funcionalidades adicionales que faltaban en la segunda fase. Se pretende añadir estas funcionalidades una vez funcione todo lo creado en la fase anterior, puesto que lo que hacen es complementar a las ya creadas. Esta fase recoge las siguientes historias de usuario:
+Una vez que se pueden consultar terremotos y los usuarios pueden crear sus cuentas, el siguiente producto mínimo viable incluiría la posibilidad de que estos usuarios registrados puedan recibir notificaciones cada vez que ocurra un terremoto. Este producto mínimo viable se recoge en el *milestone* [**notificaciones**](https://github.com/Jumacasni/Terrake/milestone/6) Pueden recibir notificaciones de cada terremoto que ocurra, o bien pueden restringir estas notificaciones de forma que sólo reciban aquellas que cumplan con los criterios seleccionados. Por ejemplo: *recibir notificaciones de los terremotos cuya magnitud sea mayor a 2.5 y hayan ocurrido en Andalucía*. Esta fase incluye las siguientes historias de usuario:
 
-* [[HU8] Modificar cuenta de usuario](https://github.com/Jumacasni/Terrake/issues/36)
-* [[HU9] Eliminar cuenta de usuario](https://github.com/Jumacasni/Terrake/issues/37)
-* [[HU12] Desactivar las notificaciones](https://github.com/Jumacasni/Terrake/issues/40)
+* [[HU6] Activar notificaciones](https://github.com/Jumacasni/Terrake/issues/51)
+* [[HU7] Restringir las notificaciones](https://github.com/Jumacasni/Terrake/issues/52)
+* [[HU8] Desactivar las notificaciones](https://github.com/Jumacasni/Terrake/issues/53)
 
 ### Cuarta fase
 
-En esta última fase de desarrollo se creará el microservicio que lleva la gestión de los reportes de terremotos. Para ello, se creará la entidad **reporte** y podrá hacerla tanto un usuario anónimo como uno registrado. Además, se añadirá una funcionalidad a la gestión de consultas que permite ver en un mapa el epicentro de un terremoto concreto. Esta fase final dará como resultado el **producto completo** con todas las funcionalidades. Las historias de usuario de esta fase son las siguientes:
+En esta última fase de desarrollo se creará el producto final que incluirá la posibilidad de reportar que se ha sentido un terremoto. Los usuarios podrán indicar dónde se encuentran en este momento y la intensidad con que han sentido el terremoto con el fin de ayudar a hacer mapas de distribución de la intensidad de un terremoto. El *milestone* de esta última fase es [**reporte de terremotos**](https://github.com/Jumacasni/Terrake/milestone/5). La historia de usuario que abarca esta última fase es:
 
-* [[HU5] Reportar que se ha sentido un terremoto](https://github.com/Jumacasni/Terrake/issues/33)
-* [[HU6] Eliminar el reporte de un terremoto](https://github.com/Jumacasni/Terrake/issues/34)
-* [[HU3] Visualización de un terremoto en un mapa](https://github.com/Jumacasni/Terrake/issues/31)
+* [[HU2] Reportar un terremoto](https://github.com/Jumacasni/Terrake/issues/47)
 
 ## Clases creadas
 
