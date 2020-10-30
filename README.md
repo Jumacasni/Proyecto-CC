@@ -8,17 +8,13 @@ La descripción de este proyecto se puede consultar en [este enlace](https://git
 
 ## Arquitectura
 
-Este proyecto se va a desarrollar usando una arquitectura basada en microservicios. Se ha elegido esta arquitectura porque nos permite diferenciar entre distintos microservicios que ofrecen funcionalidades independientes. Por ejemplo, la **la gestión de la base de datos** en la que se van almacenando todos los terremotos registrados forma un microservicio, y la **gestión de consultas de terremotos** forma otro microservicio independiente que sirve para gestionar todas las consultas que realicen los usuarios, comunicándose ambos servicios mediante una API. Esta arquitectura presenta las siguientes ventajas (poniendo como ejemplo los dos microservicios mencionados):
-* Si el microservicio de las consultas falla, eso no implica que el microservicio que gestiona la base de datos deje de funcionar. Va a seguir cogiendo datos de terremotos y metiéndolos en la base de datos.
-* Implementar una nueva funcionalidad en la gestin de consultas seria mucho más fácil puesto que ambos microservicios no comparten un mismo fichero, si no que cada uno tiene el suyo propio y es mucho más limpio y ordenado incluir nuevas funcionalidades.
-* Cada microservicio se escala de forma totalmente independiente de los demás.
+Al principio podría pensarse una arquitectura monolítica, pero una vez que se han estudiado las distintas funcionalidades que integra el producto completo, se ha visto que pueden diferenciarse claramente cuatro microservicios y que cada uno realiza una tarea distinta:
+* **Catálogo de terremotos**
+* **Cuentas de usuario**
+* **Reporte de terremotos**
+* **Envío de notificaciones**
 
-En concreto, en este proyecto encontramos los siguientes microservicios:
-* **Gestión de la base de datos**
-* **Gestión de las consultas de terremotos**
-* **Gestión análisis de datos**
-* **Gestión de usuarios**
-* **Gestión del reporte de terremotos**
+Cada microservicio realiza una funcionalidad que no depende de otro, pero que uniendo todos estos resulta en el producto total, con lo cual se ha elegido una **arquitectura basada en microservicios**. Como desarrollador de este proyecto, esta arquitectura me permite una mayor facilidad en el avance de cada microservicio, pues cada uno tiene su propio código y esto hace que resulten más sencillos y ordenados los cambios que puedan surgir en cada uno. Lo que más me beneficia de esta arquitectura es que el software va a ser fácilmente personalizable y escalable cuando se despliegue en la nube, al contrario que ocurriría si se hubiera optado por la arquitectura monolítica.
 
 ### Herramientas
 
