@@ -18,3 +18,7 @@ func NewControlador() *Controlador{
 func addTerremoto(t terremoto.Terremoto){
 
 }
+
+func getTerremoto() terremoto.Terremoto{
+	
+}
