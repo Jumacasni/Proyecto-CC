@@ -4,13 +4,13 @@ import (
 	"src/terremoto"
 )
 
-type Controlador struct {  
+type ControladorTerremotos struct {  
 	terremotos []terremoto.Terremoto
 }
 
-func NewControlador() *Controlador{
+func NewControladorTerremotos() *ControladorTerremotos{
 	// Inicializa terremotos vacíos
-	controlador := Controlador{terremotos: []terremoto.Terremoto{}}
+	controlador := ControladorTerremotos{terremotos: []terremoto.Terremoto{}}
 
 	return &controlador
 }
