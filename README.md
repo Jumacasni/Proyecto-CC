@@ -54,10 +54,11 @@ En esta última fase de desarrollo se creará el producto final que incluirá la
 
 ## Clases creadas
 
-Se han creado las siguientes clases:
-- [terremoto.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/terremoto.go): se crea la clase **terremoto**, enlazada a [[HU1]](https://github.com/Jumacasni/Terrake/issues/29)
-- [tipomagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipomagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto, creado junto con la clase **terremoto** en [[HU1]](https://github.com/Jumacasni/Terrake/issues/29)
-- [controlador.go](https://github.com/Jumacasni/Terrake/blob/main/src/controlador.go): se crea la clase **controlador** para crear o destruir terremotos, enlazada a [[HU1]](https://github.com/Jumacasni/Terrake/issues/29)
+* En la [[HU1] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/46) se han avanzado las siguientes clases:
+  * 
+- [terremoto.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/terremoto.go): se crea la clase **terremoto**.
+- [tipomagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipomagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto. Necesario para el atributo *tipoMagnitud* de la clase **terremoto*.
+- [controlador.go](https://github.com/Jumacasni/Terrake/blob/main/src/controlador.go): se crea la clase **controlador** que contiene una lista de terremotos. Se pueden añadir terremotos y consultarlos.
 
 ### Comprobación de la sintaxis
 
