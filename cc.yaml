@@ -1,0 +1,6 @@
+entidad:
+  - src/terremoto/tipomagnitud/tipoMagnitud.go
+  - src/terremoto/terremoto.go
+  - src/controladorTerremotos.go
+  - src/usuario/usuario.go
+  - src/controladorUsuarios.go
