@@ -48,7 +48,7 @@ Una vez que se pueden consultar terremotos y los usuarios pueden crear sus cuent
 
 ### *Milestone* 4, cuarta fase: [**reporte de terremotos**](https://github.com/Jumacasni/Terrake/milestone/5)
 
-En esta última fase de desarrollo se creará el producto final que incluirá la posibilidad de reportar que se ha sentido un terremoto. Los usuarios podrán indicar dónde se encuentran en este momento y la intensidad con que han sentido el terremoto con el fin de ayudar a hacer mapas de distribución de la intensidad de un terremoto. La historia de usuario que abarca esta última fase es:
+En esta última fase de desarrollo se creará el producto final que incluirá la posibilidad de reportar que se ha sentido un terremoto. Los usuarios podrán indicar dónde se encuentran en este momento y la intensidad con la que han sentido el terremoto con el fin de ayudar a hacer mapas de distribución de la intensidad de un terremoto. La historia de usuario que abarca esta última fase es:
 
 * [[HU2] Reportar un terremoto](https://github.com/Jumacasni/Terrake/issues/57)
 
