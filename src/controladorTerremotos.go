@@ -15,3 +15,8 @@ func NewControladorTerremotos() *ControladorTerremotos{
 
 	return &controlador
 }
+
+// Como desarrollador tengo que permitir que se añada un terremoto
+func addTerremoto(idTerremoto string, fechahora time.Time, latitud float64, longitud float64, profundidad int, magnitud float64, tipoMagnitud tipomagnitud.TipoMagnitud, localizacion string){
+
+}
