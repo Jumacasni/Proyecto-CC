@@ -20,3 +20,8 @@ func NewControladorTerremotos() *ControladorTerremotos{
 func addTerremoto(idTerremoto string, fechahora time.Time, latitud float64, longitud float64, profundidad int, magnitud float64, tipoMagnitud tipomagnitud.TipoMagnitud, localizacion string){
 
 }
+
+// Un usuario consulta un terremoto con su identificador
+func searchTerremoto(string id){
+
+}
