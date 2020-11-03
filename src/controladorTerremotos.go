@@ -12,7 +12,7 @@ type ControladorTerremotos struct {
 
 func NewControladorTerremotos() *ControladorTerremotos{
 	// Inicializa terremotos vacíos
-	controlador := ControladorTerremotos{terremotos: make(map[string]terremoto.Terremoto, usuarios: make(map[string]usuario.Usuario)}
+	controlador := ControladorTerremotos{terremotos: make(map[string]terremoto.Terremoto), usuarios: make(map[string]usuario.Usuario)}
 
 	return &controlador
 }
