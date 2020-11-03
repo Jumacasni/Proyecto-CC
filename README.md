@@ -57,18 +57,17 @@ En esta última fase de desarrollo se creará el producto final que incluirá la
 * En la [[HU1] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/56) se han avanzado las siguientes clases:
   * [terremoto.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/terremoto.go): se crea la clase **terremoto**.
   * [tipoMagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipoMagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto. Necesario para el atributo *tipoMagnitud* de la clase **terremoto**.
-  * [controladorTerremotos.go](https://github.com/Jumacasni/Terrake/blob/main/src/controladorTerremotos.go): se crea la clase **controlador** que contiene una lista de terremotos. Se pueden añadir terremotos y consultarlos.
+  * [controladorTerremotos.go](https://github.com/Jumacasni/Terrake/blob/main/src/controladorTerremotos.go): se crea la clase **controlador** que contiene un map de terremotos identificados por su id. Se ha añadido la función que permite consultar un terremoto por su id.
   
 * En la [[HU3] Registrar usuario](https://github.com/Jumacasni/Terrake/issues/58) se han avanzado las siguientes clases:
   * [usuario.go](https://github.com/Jumacasni/Terrake/blob/main/src/usuario/usuario.go): se crea la clase **usuario**.
-  * [controladorUsuarios.go](https://github.com/Jumacasni/Terrake/blob/main/src/controladorUsuarios.go): se crea la clase **controlador** que contiene una lista de usuarios. Se pueden añadir usuarios.
+  * [controladorTerremotos.go](https://github.com/Jumacasni/Terrake/blob/main/src/controladorTerremotos.go): se ha añadido el map con usuarios y una función que añade un usuario.
 
 La estructura del directorio ``src`` está así actualmente:
 
 ```
 src
 ├── controladorTerremotos.go
-├── controladorUsuarios.go
 ├── terremoto
 │   ├── terremoto.go
 │   └── tipomagnitud
