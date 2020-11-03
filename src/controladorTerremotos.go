@@ -26,3 +26,8 @@ func addTerremoto(idTerremoto string, fechahora time.Time, latitud float64, long
 func searchTerremoto(string id){
 
 }
+
+// Un usuario se registra en el sistema añadiendo su nombre, apellidos, email y teléfono
+func addUsuario(nombre string, apellidos string, email string, telefono string){
+
+}
