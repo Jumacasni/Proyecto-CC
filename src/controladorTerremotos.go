@@ -2,16 +2,17 @@ package main
 
 import (
 	"src/terremoto"
+	"src/usuario"
 )
 
 type ControladorTerremotos struct {  
-	terremotos []terremoto.Terremoto
 	terremotos map[string]terremoto.Terremoto
+	usuarios map[string]usuario.Usuario
 }
 
 func NewControladorTerremotos() *ControladorTerremotos{
 	// Inicializa terremotos vacíos
-	controlador := ControladorTerremotos{terremotos: make(map[string]terremoto.Terremoto)}
+	controlador := ControladorTerremotos{terremotos: make(map[string]terremoto.Terremoto, usuarios: make(map[string]usuario.Usuario)}
 
 	return &controlador
 }
