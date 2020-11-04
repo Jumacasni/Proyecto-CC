@@ -42,7 +42,7 @@ Una vez que los usuarios realizan consultas de terremotos, los usuarios pueden i
 * En la [[HU1] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/70) se han avanzado las siguientes clases:
   * [terremoto.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/terremoto.go): se crea la clase **terremoto**.
   * [tipoMagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipoMagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto. Necesario para el atributo *tipoMagnitud* de la clase **terremoto**.
-  * [monitor.go](https://github.com/Jumacasni/Terrake/blob/main/src/controladorTerremotos.go): se crea la clase **monitor** que es la que permite consultar terremotos a través de la URL del IGN. Contiene la función que permite a un usuario consultar terremotos.
+  * [monitor.go](https://github.com/Jumacasni/Terrake/blob/main/src/monitor.go): se crea la clase **monitor** que es la que permite consultar terremotos a través de la URL del IGN. Contiene la función que permite a un usuario consultar terremotos.
   
 La estructura del directorio ``src`` está así actualmente:
 
