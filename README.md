@@ -8,7 +8,7 @@ La descripción de este proyecto se puede consultar en [este enlace](https://git
 
 ## Arquitectura
 
-Se ha elegido una **arquitectura basada en microservicios** para así poder desplegar servicios que realizan funciones independientes. En este proyecto se necesita acceder al catálogo de terremotos mediante peticiones HTTP POST, con lo cual esta arquitectura nos permite realizar esta funcionalidad en un servicio independiente, sin afectar a las demás funcionalidades que se vayan a implementar. Lo que más me beneficia de esta arquitectura es que el software va a ser fácilmente personalizable y escalable cuando se despliegue en la nube, al contrario que ocurriría si se hubiera optado por la arquitectura monolítica.
+Se ha elegido una **arquitectura basada en microservicios** para así para poder manejar las distintas funcionalidades de forma independiente en un servicio diferente. Por ejemplo, en este proyecto se necesita acceder al catálogo de terremotos mediante peticiones HTTP POST, con lo cual esta arquitectura nos permite realizar esta funcionalidad en un servicio independiente, sin afectar a las demás funcionalidades que se vayan a implementar. Lo que más me beneficia de esta arquitectura es que el software va a ser fácilmente personalizable y escalable cuando se despliegue en la nube, al contrario que ocurriría si se hubiera optado por la arquitectura monolítica.
 
 ### Herramientas
 
