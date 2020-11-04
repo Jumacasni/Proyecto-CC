@@ -2,4 +2,4 @@ entidad:
   - src/terremoto/tipomagnitud/tipoMagnitud.go
   - src/terremoto/terremoto.go
   - src/monitor.go
-  - src/usuario/notificaciones.go
+  - src/notificaciones.go
