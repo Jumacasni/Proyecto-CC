@@ -2,6 +2,7 @@ package main
 
 import (
 	"src/terremoto"
+	"time"
 )
 
 type Monitor struct {
@@ -17,6 +18,6 @@ func NewMonitor() *Monitor{
 }
 
 // Consultar de terremotos, devuelve una lista de terremotos
-func consultarTerremoto(fechaInicio string, fechaFinal string, latitudMinima float, latitudMaxima float, longitudMinima float, longitudMaxima float, profundidadMinima int, profundidadMaxima int, magnitudMinima float, magnitudMaxima float) []terremoto.Terremoto{
+func consultarTerremoto(fechaInicio time.Date, fechaFinal time.Date, latitudMinima float, latitudMaxima float, longitudMinima float, longitudMaxima float, profundidadMinima int, profundidadMaxima int, magnitudMinima float, magnitudMaxima float) []terremoto.Terremoto{
 
 }
