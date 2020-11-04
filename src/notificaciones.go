@@ -15,7 +15,7 @@ func NewNotificaciones() *Notificaciones{
 	return &notificaciones
 }
 
-// Añade un email
+// Añade un email con el nombre del usuario
 func addEmail(email string, nombre string){
 
 }
