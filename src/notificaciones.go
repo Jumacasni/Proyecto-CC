@@ -24,3 +24,8 @@ func addEmail(email string){
 func modifyEmail(email string){
 
 }
+
+// Elimina un email
+func deleteEmail(email string){
+
+}
