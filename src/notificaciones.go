@@ -14,3 +14,8 @@ func NewNotificaciones() *Notificaciones{
 	notificaciones := Notificaciones{emails: make(map[string]string)
 	return &notificaciones
 }
+
+// Añade un email
+func addEmail(email string){
+
+}
