@@ -16,7 +16,7 @@ func NewNotificaciones() *Notificaciones{
 }
 
 // Añade un email
-func addEmail(email string){
+func addEmail(email string, nombre string){
 
 }
 
