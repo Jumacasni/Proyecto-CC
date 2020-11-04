@@ -26,7 +26,7 @@ El desarrollo de este proyecto se va a dividir en las siguientes fases:
 
 En esta primera fase se va a desarrollar este *milestone* que da como resultado el producto mínimo viable en el que los usuarios pueden realizar consultas de terremotos. La historia de usuario que cubre este *milestone* es:
 
-* [[HU1] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/70)
+* [[HU] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/70)
   * [Acceder al catálogo de terremotos](https://github.com/Jumacasni/Terrake/issues/74)
 
 ### *Milestone* 2, segunda fase: [**notificaciones**](https://github.com/Jumacasni/Terrake/milestone/6)
