@@ -9,10 +9,8 @@ La descripción de este proyecto se puede consultar en [este enlace](https://git
 ## Arquitectura
 
 Al principio podría pensarse una arquitectura monolítica, de forma que agruparíamos toda la funcionalidad en una misma base de código, pero una vez que se han estudiado las distintas funcionalidades que integra el producto completo, se ha visto que pueden diferenciarse claramente cuatro microservicios y que cada uno de ellos realiza una tarea distinta:
-* **Catálogo de terremotos**
-* **Cuentas de usuario**
-* **Reporte de terremotos**
-* **Envío de notificaciones**
+* **Monitorización:** se encarga de realizar las consultas de los usuarios acerca de los terremotos. Las consultas se harán a través de una petición POST a la base de datos del IGN.
+* **Notificaciones:** se encarga de notificar a los usuarios a través de sus correos electrónicos de los terremotos que ocurren.
 
 Cada microservicio realiza una funcionalidad que no depende de otro pero que uniendo todos estos resulta en el producto total, con lo cual se ha elegido finalmente una **arquitectura basada en microservicios**. Como desarrollador de este proyecto, esta arquitectura me permite una mayor facilidad en el avance de cada microservicio, pues cada uno tiene su propio código y esto hace que resulten más sencillos y ordenados los cambios que puedan surgir en cada uno. Lo que más me beneficia de esta arquitectura es que el software va a ser fácilmente personalizable y escalable cuando se despliegue en la nube, al contrario que ocurriría si se hubiera optado por la arquitectura monolítica.
 
