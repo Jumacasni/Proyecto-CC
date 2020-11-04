@@ -33,9 +33,9 @@ En esta primera fase se va a desarrollar este *milestone* que da como resultado 
 
 Una vez que los usuarios realizan consultas de terremotos, los usuarios pueden indicar su correo electrónico para recibir notificaciones cada vez que ocurra un terremoto. Del mismo modo, podrán modificar este correo electrónico o bien eliminarlo para desactivar las notificaciones. Las historias de usuario que se han creado son las siguientes:
 
-* [[HU] Activar notificaciones](https://github.com/Jumacasni/Terrake/issues/71)
+* [[HU] Notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/71)
 * [[HU] Modificar el correo electrónico de las notificaciones](https://github.com/Jumacasni/Terrake/issues/72)
-* [[HU] Desactivar notificaciones](https://github.com/Jumacasni/Terrake/issues/73)
+* [[HU] Dejar de notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/73)
 
 ## Clases creadas
 
@@ -44,7 +44,7 @@ Una vez que los usuarios realizan consultas de terremotos, los usuarios pueden i
   * [tipoMagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipoMagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto. Necesario para el atributo *tipoMagnitud* de la clase **terremoto**.
   * [monitor.go](https://github.com/Jumacasni/Terrake/blob/main/src/monitor.go): se crea la clase **monitor** que es la que permite consultar terremotos a través de la URL del IGN. Contiene la función que permite a un usuario consultar terremotos.
 
-* En las [[HU] Activar notificaciones](https://github.com/Jumacasni/Terrake/issues/71), [[HU] Modificar correo electrónico de notificaciones](https://github.com/Jumacasni/Terrake/issues/72) y [[HU] Desctivar notificaciones](https://github.com/Jumacasni/Terrake/issues/73) se ha avanzado la siguiente clase:
+* En las [[HU] Notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/71), [[HU] Modificar correo electrónico de notificaciones](https://github.com/Jumacasni/Terrake/issues/72) y [[HU] Dejar de notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/73) se ha avanzado la siguiente clase:
   * [notificaciones.go](https://github.com/Jumacasni/Terrake/blob/main/src/notificaciones.go): encargada de los correos electrónicos de las notificaciones de los usuarios.
   
 La estructura del directorio ``src`` está así actualmente:
