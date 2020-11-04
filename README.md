@@ -45,10 +45,10 @@ Una vez que los usuarios realizan consultas de terremotos, los usuarios pueden i
 * En la [[HU] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/70) se han avanzado las siguientes clases:
   * [terremoto.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/terremoto.go): se crea la clase **terremoto**.
   * [tipoMagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipoMagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto. Necesario para el atributo *tipoMagnitud* de la clase **terremoto**.
-  * [monitor.go](https://github.com/Jumacasni/Terrake/blob/main/src/monitor.go): se crea la clase **monitor** que es la que permite consultar terremotos a través de la URL del IGN. Contiene la función que permite a un usuario consultar terremotos.
+  * [monitor.go](https://github.com/Jumacasni/Terrake/blob/main/src/monitor.go): se crea la clase **monitor** que es la que permite consultar terremotos a través de la URL del IGN. Contiene la función que permite consultar terremotos.
 
 * En las [[HU] Notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/71), [[HU] Modificar correo electrónico de notificaciones](https://github.com/Jumacasni/Terrake/issues/72) y [[HU] Dejar de notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/73) se ha avanzado la siguiente clase:
-  * [notificaciones.go](https://github.com/Jumacasni/Terrake/blob/main/src/notificaciones.go): encargada de los correos electrónicos de las notificaciones de los usuarios. Los emails se almacenan en un map cuya clave es el email del usuario y el valor es su nombre.
+  * [notificaciones.go](https://github.com/Jumacasni/Terrake/blob/main/src/notificaciones.go): encargada de almacenar los emails a los que se van a notificar los terremotos. Los emails se almacenan en un map cuya clave es el email del usuario y el valor es su nombre.
   
 La estructura del directorio ``src`` está así actualmente:
 
