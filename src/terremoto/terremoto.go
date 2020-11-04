@@ -21,31 +21,3 @@ func NewTerremoto(idTerremoto string, fechahora time.Time, latitud float64, long
 
 	return &terremoto
 }
-
-func getFechaHora() int{
-
-}
-
-func getLatitud() float64{
-
-}
-
-func getLongitud() float64{
-
-}
-
-func getProfundidad() int{
-
-}
-
-func getMagnitud() float64{
-
-}
-
-func getTipoMagnitud() tipomagnitud.TipoMagnitud{
-
-}
-
-func getLocalizacion() string{
-	
-}
