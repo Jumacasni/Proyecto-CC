@@ -39,23 +39,23 @@ Una vez que los usuarios realizan consultas de terremotos, los usuarios pueden i
 
 ## Clases creadas
 
-* En la [[HU1] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/70) se han avanzado las siguientes clases:
+* En la [[HU] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/70) se han avanzado las siguientes clases:
   * [terremoto.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/terremoto.go): se crea la clase **terremoto**.
   * [tipoMagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipoMagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto. Necesario para el atributo *tipoMagnitud* de la clase **terremoto**.
   * [monitor.go](https://github.com/Jumacasni/Terrake/blob/main/src/monitor.go): se crea la clase **monitor** que es la que permite consultar terremotos a través de la URL del IGN. Contiene la función que permite a un usuario consultar terremotos.
+
+* En las [[HU] Activar notificaciones](https://github.com/Jumacasni/Terrake/issues/71), [[HU] Modificar correo electrónico de notificaciones](https://github.com/Jumacasni/Terrake/issues/72) y [[HU] Desctivar notificaciones](https://github.com/Jumacasni/Terrake/issues/73) se ha avanzado la siguiente clase:
+  * [notificaciones.go](https://github.com/Jumacasni/Terrake/blob/main/src/notificaciones.go): encargada de los correos electrónicos de las notificaciones de los usuarios.
   
 La estructura del directorio ``src`` está así actualmente:
 
 ```
-src
-├── controladorTerremotos.go
+├── monitor.go
+├── notificaciones.go
 ├── terremoto
 │   ├── terremoto.go
 │   └── tipomagnitud
 │       └── tipoMagnitud.go
-└── usuario
-    └── usuario.go
-
 ```
 
 ### Comprobación de la sintaxis
