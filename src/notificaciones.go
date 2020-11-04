@@ -19,3 +19,8 @@ func NewNotificaciones() *Notificaciones{
 func addEmail(email string){
 
 }
+
+// Modifica un email
+func modifyEmail(email string){
+
+}
