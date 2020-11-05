@@ -30,9 +30,11 @@ En esta primera fase se va a desarrollar este *milestone* que da como resultado 
 
 Una vez que los usuarios realizan consultas de terremotos, los usuarios pueden indicar su correo electrónico y su nombre para recibir notificaciones cada vez que ocurra un terremoto. Del mismo modo, podrán modificar este correo electrónico o bien eliminarlo para desactivar las notificaciones. Las historias de usuario que se han creado son las siguientes:
 
-* [[HU] Notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/71)
+* [[HU] Activar notificaciones](https://github.com/Jumacasni/Terrake/issues/71)
   * [Comprobar que aún no está registrado el email](https://github.com/Jumacasni/Terrake/issues/83)
   * [Añadir email y nombre al map](https://github.com/Jumacasni/Terrake/issues/78)
+* [[HU] Notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/84)
+  * [Enviar correo a cada usuario en la lista](https://github.com/Jumacasni/Terrake/issues/85)
 * [[HU] Modificar el correo electrónico de las notificaciones](https://github.com/Jumacasni/Terrake/issues/72)
   * [Buscar email que se quiere cambiar](https://github.com/Jumacasni/Terrake/issues/79)
   * [Modificar email](https://github.com/Jumacasni/Terrake/issues/80)
