@@ -2,7 +2,7 @@ package terremoto
 
 import (  
 	"time"
-	"src/terremoto/tipomagnitud"
+	"./tipomagnitud"
 )
 
 type Terremoto struct {  
