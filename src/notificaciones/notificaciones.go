@@ -61,11 +61,11 @@ func AddEmail(email string, checkEmail EmailPreCheck) error{
 	return nil
 }
 
-// Modifica un email
-func ModifyEmail(email string, newEmail string) error{
-	// Busca si el email existe
-	found := EmailExists(email)
-	if found != nil{
+/****** MODIFICA EMAIL ******/
+func ModifyEmail(email string, newEmail string, checkEmail EmailPreCheck) error{
+	// Usa la función mock
+	found := checkEmail.emailExists(email)
+	if !found{
 		return fmt.Errorf("El email '%s' no existe", email)
 	}
 

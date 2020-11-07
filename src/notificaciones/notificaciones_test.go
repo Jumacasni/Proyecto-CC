@@ -80,20 +80,40 @@ func TestAddEmailFail(t *testing.T){
 	}
 }
 
+/***** TEST MODIFY EMAIL *****/
 // Test que modifica un email. Pasa el test.
 func TestModifyEmail(t *testing.T){
-	err := ModifyEmail("test@test.com", "nuevotest@nuevotest.com")
+	// Función mock, el email existe
+	checkEmail := checkEmailMock{}
+	emailExistsMock = func(email string) bool{
+		return true
+	}
 
+	// El length del map antes de modificar
+	prevLen := len(db.emails)
+	// Modifica el email
+	err := ModifyEmail("test@test.com", "nuevotest@nuevotest.com", checkEmail)
 	if err != nil{
 		t.Error(err)
+	}
+	// El length del map antes de modificar
+	afterLen := len(db.emails)
+
+	// Si el length del map cambia, falla el test
+	if (prevLen != afterLen){
+		t.Error("El length del map ha cambiado, no se ha modificado correctamente el email")
 	}
 
 	// Comprueba que el antiguo email ya no existe y le nuevo sí
 	_, oldExists := db.emails["test@test.com"]
 	_, newExists := db.emails["nuevotest@nuevotest.com"]
 
-	if (oldExists || !newExists){
-		t.Error("El email no se ha modificado correctamente")
+	if (oldExists){
+		t.Error("El antiguo email sigue existiendo")
+	}
+
+	if !newExists{
+		t.Error("El nuevo email no existe")
 	}
 }
 
