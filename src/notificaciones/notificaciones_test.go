@@ -119,32 +119,83 @@ func TestModifyEmail(t *testing.T){
 
 // Test para comprobar si las notificaciones están activadas. Pasa el test
 func TestEmailActivatedOk(t *testing.T){
-	err := EmailActivated("test@test.com")
-	if err != nil{
-		t.Error(err)
-	}
-}
-
-// Test para desactivar las notificaciones de "prueba@prueba.com". Pasa el test
-func TestDeactivateEmailOk(t *testing.T){
-	err := DeactivateEmail("prueba@prueba.com")
-	if err != nil{
-		t.Error(err)
-	}
-}
-
-// Test que comprueba si las notificaciones de "prueba@prueba.com" están activadas. Falla el test
-func TestEmailActivatedFail(t *testing.T){
 	err := EmailActivated("prueba@prueba.com")
 	if err != nil{
 		t.Error(err)
 	}
 }
 
-// Test para desactivar las notificaciones. Falla el test porque ya están desactivadas.
-func TestDeactivateEmailFail(t *testing.T){
-	err := DeactivateEmail("prueba@prueba.com")
+/***** MOCK PARA COMPROBAR ACTIVACIÓN DE NOTIFICACIONES *****/
+var emailActivatedMock func(email string) bool
+
+type checkEmailActivatedMock struct{}
+
+func (u checkEmailActivatedMock) emailActivated(email string) bool{
+	return emailActivatedMock(email)
+}
+
+/***** TEST DEACTIVATE EMAIL *****/
+// Test para desactivar las notificaciones de "prueba@prueba.com" (están activadas)
+func TestDeactivateEmailOk(t *testing.T){
+	// Función mock, el email existe
+	checkEmail := checkEmailMock{}
+	emailExistsMock = func(email string) bool{
+		return true
+	}
+	checkEmailActivated := checkEmailActivatedMock{}
+	// Función mock, el email tiene las notificaciones activadas
+	emailActivatedMock = func(email string) bool{
+		return true
+	}
+
+	// Email de prueba
+	emailPrueba := "prueba@prueba.com"
+	// Valor de las notificaciones antes de desactivarlas
+	prevValue := db.emails[emailPrueba]
+	err := DeactivateEmail(emailPrueba, checkEmail, checkEmailActivated)
 	if err != nil{
 		t.Error(err)
+	}
+	// Valor de las notificaciones después de desactivarlas
+	afterValue := db.emails[emailPrueba]
+
+	// El valor del email tiene que ser distinto del valor antes de DeactivateEmail
+	if (db.emails[emailPrueba] == prevValue){
+		t.Error("Las notificaciones siguen activadas")
+	}
+	// El valor del email tiene que ser igual al valor después de DeactivateEmail
+	if (db.emails[emailPrueba] != afterValue){
+		t.Error("Las notificaciones no se han desactivado")
+	}
+}
+
+// Test para desactivar las notificaciones de "prueba@prueba.com" (están desactivadas)
+func TestDeactivateEmailFail(t *testing.T){
+	// Función mock, el email existe
+	checkEmail := checkEmailMock{}
+	emailExistsMock = func(email string) bool{
+		return true
+	}
+	checkEmailActivated := checkEmailActivatedMock{}
+	// Función mock, el email tiene las notificaciones desactivadas
+	emailActivatedMock = func(email string) bool{
+		return false
+	}
+
+	// Email de prueba
+	emailPrueba := "prueba@prueba.com"
+	// Valor de las notificaciones antes de desactivarlas
+	prevValue := db.emails[emailPrueba]
+	DeactivateEmail(emailPrueba, checkEmail, checkEmailActivated)
+	// Valor de las notificaciones después de desactivarlas
+	afterValue := db.emails[emailPrueba]
+
+	// El valor de antes y después de la función DeactivateEmail tiene que ser el mismo
+	if (prevValue != afterValue){
+		t.Error("El email tenía las notificaciones desactivadas y se han activado")
+	}
+	// El valor del email tiene que ser igual al valor después de DeactivateEmail
+	if (afterValue != false){
+		t.Error("Las notificaciones se han activado")
 	}
 }

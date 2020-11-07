@@ -77,18 +77,21 @@ func ModifyEmail(email string, newEmail string, checkEmail EmailPreCheck) error{
 	return nil
 }
 
-// Desactiva las notificaciones de un email
-func DeactivateEmail(email string) error{
-	// Busca si el email ya existe
-	found := EmailExists(email)
+// Mock para la función EmailActivated
+type EmailActivatedPreCheck interface{
+	emailActivated(string) bool
+}
 
-	if found != nil{
-		return fmt.Errorf("El email '%s' no está registrado", email)
+/****** DESACTIVA NOTIFICACIONES ******/
+func DeactivateEmail(email string, checkEmail EmailPreCheck, checkEmailActivated EmailActivatedPreCheck) error{
+	// Usa la función mock
+	found := checkEmail.emailExists(email)
+	if !found{
+		return fmt.Errorf("El email '%s' no existe", email)
 	}
 
-	activated := EmailActivated(email)
-
-	if activated != nil{
+	activated := checkEmailActivated.emailActivated(email)
+	if !activated{
 		return fmt.Errorf("El email '%s' ya tiene las notificaciones desactivadas", email)
 	}
 
