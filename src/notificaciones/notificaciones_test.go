@@ -68,3 +68,35 @@ func TestModifyEmail(t *testing.T){
 		t.Error("El email no se ha modificado correctamente")
 	}
 }
+
+// Test para comprobar si las notificaciones están activadas. Pasa el test
+func TestEmailActivatedOk(t *testing.T){
+	err := EmailActivated("test@test.com")
+	if err != nil{
+		t.Error(err)
+	}
+}
+
+// Test para desactivar las notificaciones de "prueba@prueba.com". Pasa el test
+func TestDeactivateEmailOk(t *testing.T){
+	err := DeactivateEmail("prueba@prueba.com")
+	if err != nil{
+		t.Error(err)
+	}
+}
+
+// Test que comprueba si las notificaciones de "prueba@prueba.com" están activadas. Falla el test
+func TestEmailActivatedFail(t *testing.T){
+	err := EmailActivated("prueba@prueba.com")
+	if err != nil{
+		t.Error(err)
+	}
+}
+
+// Test para desactivar las notificaciones. Falla el test porque ya están desactivadas.
+func TestDeactivateEmailFail(t *testing.T){
+	err := DeactivateEmail("prueba@prueba.com")
+	if err != nil{
+		t.Error(err)
+	}
+}
