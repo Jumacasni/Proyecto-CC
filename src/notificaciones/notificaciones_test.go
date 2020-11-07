@@ -28,3 +28,25 @@ func TestEmailExistsFail(t *testing.T){
 		t.Error(err)
 	}
 }
+
+// Test que añade un email. Pasa el test.
+func TestAddEmailOk(t *testing.T){
+	// Añade el email
+	err := AddEmail("prueba@prueba.com")
+	if err != nil{
+		t.Error(err)
+	}
+
+	// Comprueba que el email se ha añadido
+	err = EmailExists("prueba@prueba.com")
+	if err != nil{
+		t.Error(err)
+	}
+}
+
+func TestAddEmailFail(t *testing.T){
+	err := AddEmail("prueba@prueba.com")
+	if err != nil{
+		t.Error(err)
+	}
+}
