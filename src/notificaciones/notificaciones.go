@@ -34,6 +34,15 @@ func EmailExists(email string) error{
 	return nil
 }
 
+// Comprueba si el email tiene activadas las notificaciones
+func EmailActivated(email string) error{
+	value, _ := db.emails[email]
+	if !value{
+		return fmt.Errorf("El email '%s' no tiene activadas las notificaciones", email)
+	}
+	return nil
+}
+
 // Añade un email
 func AddEmail(email string) error{
 	// Busca si el email ya existe
