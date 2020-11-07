@@ -34,9 +34,17 @@ func EmailExists(email string) error{
 	return nil
 }
 
-// Añade un email con el nombre del usuario
-func addEmail(email string, nombre string){
+// Añade un email
+func AddEmail(email string) error{
+	// Busca si el email ya existe
+	found := EmailExists(email)
+	if found == nil{
+		return fmt.Errorf("El email '%s' ya está registrado", email)
+	}
 
+	// Inserta el email en la db
+	db.emails[email] = true
+	return nil
 }
 
 // Modifica un email
