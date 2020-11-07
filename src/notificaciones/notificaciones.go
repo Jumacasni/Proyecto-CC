@@ -2,6 +2,7 @@ package notificaciones
 
 import (
 	"fmt"
+	"net/smtp"
 )
 
 // Emails registrados en la base de datos, de momento solo es un map
@@ -99,4 +100,36 @@ func DeactivateEmail(email string, checkEmail EmailPreCheck, checkEmailActivated
 	db.emails[email] = false
 
 	return nil
+}
+
+// Intefaz para mockear la función de enviar un email
+type EmailSender interface {
+	SendEmail(email []string, body []byte) error
+}
+
+// Implementación para la interfaz EmailSender, el servidor del email
+type EmailConfig struct {
+	user string
+	password string
+	host string
+	port string
+	email string
+}
+
+// Describe el struct que manda el email
+type emailSender struct {
+	conf EmailConfig
+	send func(string, smtp.Auth, string, []string, []byte) error
+}
+
+// Simula la función smtp.SendMail
+func NewEmailSender(conf EmailConfig) EmailSender {
+	return &emailSender{conf, smtp.SendMail}
+}
+
+/***** SEND EMAIL *****/
+func (e *emailSender) SendEmail(email []string, terremotos []byte) error{
+	addr := e.conf.host + ":" + e.conf.port
+	auth := smtp.PlainAuth("", e.conf.user, e.conf.password, e.conf.host)
+	return e.send(addr, auth, e.conf.email, email, terremotos)
 }

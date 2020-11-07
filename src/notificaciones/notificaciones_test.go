@@ -3,6 +3,7 @@ package notificaciones
 import (
 	"testing"
 	"os"
+	"net/smtp"
 )
 
 func TestMain(m *testing.M){
@@ -197,5 +198,44 @@ func TestDeactivateEmailFail(t *testing.T){
 	// El valor del email tiene que ser igual al valor después de DeactivateEmail
 	if (afterValue != false){
 		t.Error("Las notificaciones se han activado")
+	}
+}
+
+/***** TEST SEND EMAIL *****/
+
+// Función mock para enviar un email
+func mockSend(errToReturn error) (func(string, smtp.Auth, string, []string, []byte) error, *emailRecorder) {
+	r := new(emailRecorder)
+	return func(addr string, a smtp.Auth, from string, to []string, body []byte) error {
+		*r = emailRecorder{addr, a, from, to, body}
+		return errToReturn
+	}, r
+}
+
+// Describe el struct con el email que se envía
+type emailRecorder struct {
+	addr string
+	auth smtp.Auth
+	from string
+	to []string
+	body []byte
+}
+
+// Test para enviar email correctamente
+func TestSendEmailOk(t *testing.T) {
+	// f: la función que se manda
+	// r: struct con el email que se envía
+	f, r := mockSend(nil)
+	sender := &emailSender{send: f}
+	body := "Notificación de terremoto"
+	err := sender.SendEmail([]string{"prueba@prueba.com"}, []byte(body))
+
+	if err != nil {
+		t.Errorf("Error %s", err)
+	}
+
+	// El mensaje enviado en emailRecorder debe coincidir con el body que se envía
+	if string(r.body) != body {
+		t.Errorf("El mensaje enviado con coincide con el body")
 	}
 }
