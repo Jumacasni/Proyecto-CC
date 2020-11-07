@@ -72,7 +72,23 @@ func ModifyEmail(email string, newEmail string) error{
 	return nil
 }
 
-// Elimina un email
-func deleteEmail(email string){
+// Desactiva las notificaciones de un email
+func DeactivateEmail(email string) error{
+	// Busca si el email ya existe
+	found := EmailExists(email)
 
+	if found != nil{
+		return fmt.Errorf("El email '%s' no está registrado", email)
+	}
+
+	activated := EmailActivated(email)
+
+	if activated != nil{
+		return fmt.Errorf("El email '%s' ya tiene las notificaciones desactivadas", email)
+	}
+
+	// Desactiva las notificaciones
+	db.emails[email] = false
+
+	return nil
 }
