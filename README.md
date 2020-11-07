@@ -14,6 +14,8 @@ Una alternativa muy potente al gestor implícito de Go es [realize](https://gith
 
 Como ahora mismo solo se tiene un proyecto y no considero necesario ver los errores y logs en la web, el **gestor de tareas implícito** es más que suficiente para las tareas de este proyecto, con lo cual se ha decidido usar este.
 
+Para ejecutar las tareas se va a usar Makefile, que ejecutará los comandos de go.
+
 ## Biblioteca de aserciones
 
 **Go** tiene su propia biblioteca de aserciones [testing](https://golang.org/pkg/testing/). Sin embargo, **Go** ha pensado en los programadores que vienen de otros lenguajes de programación y que siempre han usado *assertions*. De este modo, proporcionan la biblioteca [assert](https://godoc.org/github.com/stretchr/testify/assert).
