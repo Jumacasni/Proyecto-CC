@@ -12,7 +12,7 @@ Al usar **Go** como lenguaje de programación, una característica de este lengu
 
 Una alternativa muy potente al gestor implícito de Go es [realize](https://github.com/oxequa/realize). Añade la posibilidad de manejar diferentes proyectos a la misma vez y la posibilidad de ver los errores y logs en una web de forma más limpia.
 
-Como ahora mismo solo se tiene un proyecto y no considero necesario ver los errores y logs en la web, el **gestor de tareas implícito** sería más que suficiente para las tareas de este proyecto, pero como va a haber varios archivos distribuidos en diferentes directorios, se ha decidido usar **Makefile** para ejecutar el gestor de tareas de Go, valga la redundancia. De esta forma se puede ejecutar **make test** y ejecutar todos los tests, estén en la carpeta que estén. Si usáramos **go test**, habría que especificar los directorios.
+Como ahora mismo solo se tiene un proyecto y no considero necesario ver los errores y logs en la web, el **gestor de tareas implícito** sería más que suficiente para las tareas de este proyecto. El problema es que como va a haber varios archivos distribuidos en diferentes directorios, habría que hacer ```go test <directorio>```. Por esta razón se ha decidido usar **Makefile** para ejecutar el gestor de tareas de Go, valga la redundancia. De esta forma se puede ejecutar ```**make test**``` y ejecutar el comando ```go test ./src/...``` que ejecuta todos los tests, y es mucho más cómodo.
 
 ## Biblioteca de aserciones
 
