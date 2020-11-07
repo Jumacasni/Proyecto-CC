@@ -48,8 +48,19 @@ func AddEmail(email string) error{
 }
 
 // Modifica un email
-func modifyEmail(email string){
+func ModifyEmail(email string, newEmail string) error{
+	// Busca si el email existe
+	found := EmailExists(email)
+	if found != nil{
+		return fmt.Errorf("El email '%s' no existe", email)
+	}
 
+	// Se añade el nuevo email con el valor que tenía antes
+	db.emails[newEmail] = db.emails[email]
+	// Se borra el antiguo email
+	delete(db.emails, email)
+
+	return nil
 }
 
 // Elimina un email
