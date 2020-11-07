@@ -21,34 +21,62 @@ func TestEmailExistsOk(t *testing.T){
 	}
 }
 
-// Test para comprobar que existe un email. Falla el test.
-func TestEmailExistsFail(t *testing.T){
-	err := EmailExists("prueba@prueba.com")
-	if err != nil{
-		t.Error(err)
-	}
+/***** MOCK PARA COMPROBAR QUE EXISTE EMAIL *****/
+var emailExistsMock func(email string) bool
+
+type checkEmailMock struct{}
+
+func (u checkEmailMock) emailExists(email string) bool{
+	return emailExistsMock(email)
 }
 
-// Test que añade un email. Pasa el test.
+/***** TEST ADD EMAIL *****/
+// Test que añade un email que no está registrado
 func TestAddEmailOk(t *testing.T){
+	// Función mock, el email no existe
+	checkEmail := checkEmailMock{}
+	emailExistsMock = func(email string) bool{
+		return false
+	}
+
+	// El length del map antes de meter el nuevo email
+	prevLen := len(db.emails)
 	// Añade el email
-	err := AddEmail("prueba@prueba.com")
+	err := AddEmail("prueba@prueba.com", checkEmail)
 	if err != nil{
 		t.Error(err)
 	}
-
-	// Comprueba que el email se ha añadido
-	err = EmailExists("prueba@prueba.com")
-	if err != nil{
-		t.Error(err)
+	// El length del map después de meter el nuevo email
+	afterLen := len(db.emails)
+	
+	// El length del map debe ser mayor que cero para pasar el test
+	if (afterLen == 0){
+		t.Error("El length del map es 0, no se ha metido el email correctamente")
+	}
+	// El length del map debe incrementar en uno
+	if (afterLen != (prevLen+1)){
+		t.Error("El email no se ha metido correctamente")
 	}
 }
 
-// Test que añade un email que ya está registrado. Falla el test.
+// Test que añade un email que ya está registrado
 func TestAddEmailFail(t *testing.T){
-	err := AddEmail("prueba@prueba.com")
-	if err != nil{
-		t.Error(err)
+	// Función mock, el email ya existe
+	checkEmail := checkEmailMock{}
+	emailExistsMock = func(email string) bool{
+		return true
+	}
+
+	// El length del map antes AddEmail
+	prevLen := len(db.emails)
+	// Añade el email
+	AddEmail("prueba@prueba.com", checkEmail)
+	// El length del map después de AddEmail
+	afterLen := len(db.emails)
+	
+	// El length del map no debe cambiar
+	if (afterLen != prevLen){
+		t.Error("El length del map ha cambiado")
 	}
 }
 

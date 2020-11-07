@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// Emails registrados en el sistema
+// Emails registrados en la base de datos, de momento solo es un map
 // test@test.com = true -> el email tiene activadas las notificaciones
 // test@test.com = false -> el email no tiene activadas las notificaciones
 type Notificaciones struct {
@@ -43,11 +43,16 @@ func EmailActivated(email string) error{
 	return nil
 }
 
-// Añade un email
-func AddEmail(email string) error{
-	// Busca si el email ya existe
-	found := EmailExists(email)
-	if found == nil{
+// Mock para la función EmailExists
+type EmailPreCheck interface{
+	emailExists(string) bool
+}
+
+/****** AÑADIR EMAIL ******/
+func AddEmail(email string, checkEmail EmailPreCheck) error{
+	// Usa la función mock
+	found := checkEmail.emailExists(email)
+	if found{
 		return fmt.Errorf("El email '%s' ya está registrado", email)
 	}
 
