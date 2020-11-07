@@ -44,9 +44,27 @@ func TestAddEmailOk(t *testing.T){
 	}
 }
 
+// Test que añade un email que ya está registrado. Falla el test.
 func TestAddEmailFail(t *testing.T){
 	err := AddEmail("prueba@prueba.com")
 	if err != nil{
 		t.Error(err)
+	}
+}
+
+// Test que modifica un email. Pasa el test.
+func TestModifyEmail(t *testing.T){
+	err := ModifyEmail("test@test.com", "nuevotest@nuevotest.com")
+
+	if err != nil{
+		t.Error(err)
+	}
+
+	// Comprueba que el antiguo email ya no existe y le nuevo sí
+	_, oldExists := db.emails["test@test.com"]
+	_, newExists := db.emails["nuevotest@nuevotest.com"]
+
+	if (oldExists || !newExists){
+		t.Error("El email no se ha modificado correctamente")
 	}
 }
