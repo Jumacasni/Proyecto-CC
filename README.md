@@ -2,68 +2,38 @@
 
 **Autor:** Juan Manuel Castillo Nievas
 
-## Descripción del proyecto
+* [Descripción del proyecto](https://github.com/Jumacasni/Terrake/blob/main/docs/descripcion_proyecto.md)
+* [Arquitectura](https://github.com/Jumacasni/Terrake/blob/main/docs/arquitectura.md)
+* [Planificación](https://github.com/Jumacasni/Terrake/blob/main/docs/planificacion.md)
 
-La descripción de este proyecto se puede consultar en [este enlace](https://github.com/Jumacasni/Terrake/blob/main/docs/descripcion_proyecto.md).
+## Gestor de tareas
 
-## Arquitectura
+Al usar **Go** como lenguaje de programación, una característica de este lenguaje es que tiene un gestor de tareas implícito. A través del comando ```go <comando> [argumentos]``` se pueden ejecutar diferentes tareas como compilar e instalar paquetes y dependencias o ejecutar tests, entre otras. Todos los comandos que se pueden ejecutar con **Go** se encuentran en [esta sección](https://golang.org/cmd/go/) de su página web.
 
-Se ha elegido una **arquitectura basada en microservicios** para así para poder manejar las distintas funcionalidades de forma independiente en un servicio diferente. Por ejemplo, en este proyecto se necesita acceder al catálogo de terremotos mediante peticiones HTTP POST, con lo cual esta arquitectura nos permite realizar esta funcionalidad en un servicio independiente, sin afectar a las demás funcionalidades que se vayan a implementar. Lo que más me beneficia de esta arquitectura es que el software va a ser fácilmente personalizable y escalable cuando se despliegue en la nube, al contrario que ocurriría si se hubiera optado por la arquitectura monolítica.
+Una alternativa muy potente al gestor implícito de Go es [realize](https://github.com/oxequa/realize). Añade la posibilidad de manejar diferentes proyectos a la misma vez y la posibilidad de ver los errores y logs en una web de forma más limpia.
 
-### Herramientas
+Como ahora mismo solo se tiene un proyecto y no considero necesario ver los errores y logs en la web, el **gestor de tareas implícito** sería más que suficiente para las tareas de este proyecto. El problema es que como va a haber varios archivos distribuidos en diferentes directorios, habría que hacer ```go test <directorio>``` y es incómodo. Por esta razón se ha decidido usar **Makefile**, que ejecutará los comandos de Go. De esta forma se puede hacer ```make test``` y con ello se ejecutará automáticamente ```go test ./src/monitor``` y ```go test ./src/notificaciones```, y es mucho más cómodo.
 
-* **Lenguaje:** en un principio se pensó *Node.js* por la experiencia que tengo en este lenguaje, pero finalmente se va a realizar en **Go** ya que nunca he tenido la oportunidad de aprenderlo y este proyecto es el momento para hacerlo.
+## Biblioteca de aserciones
 
-## Planificación del proyecto
+**Go** tiene su propia biblioteca de aserciones [testing](https://golang.org/pkg/testing/). Sin embargo, **Go** ha pensado en los programadores que vienen de otros lenguajes de programación y que siempre han usado *assertions*. De este modo, proporcionan la biblioteca [assert](https://godoc.org/github.com/stretchr/testify/assert).
 
-El desarrollo de este proyecto se va a dividir en las siguientes fases:
+En este proyecto se va a usar su propia biblioteca **testing**, ya que en lugar de utilizar funciones específicas de aserciones, lo que hace es devolver un error cuando falla el test, y esto simplifica las pruebas.
 
-### *Milestone* 1, primera fase: [**consultas**](https://github.com/Jumacasni/Terrake/milestone/7)
+## Marco de prueba
 
-En esta primera fase se va a desarrollar este *milestone* que da como resultado el producto mínimo viable en el que los usuarios pueden realizar consultas de terremotos. Una consulta es una búsqueda de terremotos de acuerdo a sus características, por ejemplo, *los terremotos ocurridos entre el 01/01/2020 y 31/01/2020*. Dichas características se detallan en la historia de usuario. La historia de usuario que cubre este *milestone* es:
+Se analizan dos posibles marcos de prueba:
+* [go test](https://golang.org/pkg/testing/): viene por defecto en **Go**. No requiere librerías externas.
+* [godoc](https://github.com/cucumber/godog): creada para aplicar *Behavior Driven Development* en **Go**.
 
-* [[HU] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/70)
-  * [Devolver la lista con los terremotos encontrados](https://github.com/Jumacasni/Terrake/issues/77)
+Se va a optar por ```go test``` y se va a desarrollar usando *Test Driven Development*. Es cierto que BDD ayuda a entender mejor los tests y, cuando se trata de un proyecto grande en el que hay clientes que no entienden mucho de programación, puede mejorar la comunicación desarrollador-cliente, pero este proyecto es propio y no va a entregarse a nadie que no entienda de programación. Además, con TDD se consigue una mejor calidad de código, que es lo prioritario para mí.
 
-### *Milestone* 2, segunda fase: [**notificaciones**](https://github.com/Jumacasni/Terrake/milestone/6)
+## Instrucciones
 
-Una vez que los usuarios realizan consultas de terremotos, los usuarios pueden indicar su correo electrónico y su nombre para recibir notificaciones cada vez que ocurra un terremoto. Del mismo modo, podrán modificar este correo electrónico o bien eliminarlo para desactivar las notificaciones. Las historias de usuario que se han creado son las siguientes:
-
-* [[HU] Activar notificaciones](https://github.com/Jumacasni/Terrake/issues/71)
-  * [Comprobar que aún no está registrado el email](https://github.com/Jumacasni/Terrake/issues/83)
-  * [Añadir email y nombre al map](https://github.com/Jumacasni/Terrake/issues/78)
-* [[HU] Notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/84)
-* [[HU] Modificar el correo electrónico de las notificaciones](https://github.com/Jumacasni/Terrake/issues/72)
-  * [Buscar email que se quiere cambiar](https://github.com/Jumacasni/Terrake/issues/79)
-  * [Modificar email](https://github.com/Jumacasni/Terrake/issues/80)
-* [[HU] Dejar de notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/73)
-  * [Buscar email que se quiere borrar](https://github.com/Jumacasni/Terrake/issues/81)
-  * [Borrar email del map](https://github.com/Jumacasni/Terrake/issues/82)
-
-## Clases creadas
-
-* En la [[HU] Consultar terremotos](https://github.com/Jumacasni/Terrake/issues/70) se han avanzado las siguientes clases:
-  * [terremoto.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/terremoto.go): se crea la clase **terremoto**.
-  * [tipoMagnitud.go](https://github.com/Jumacasni/Terrake/blob/main/src/terremoto/tipomagnitud/tipoMagnitud.go): contiene el *enum* con los tipos de magnitudes que puede tener un terremoto. Necesario para el atributo *tipoMagnitud* de la clase **terremoto**.
-  * [monitor.go](https://github.com/Jumacasni/Terrake/blob/main/src/monitor.go): se crea la clase **monitor** que es la que permite consultar terremotos a través de la URL del IGN. Contiene la función que permite consultar terremotos.
-
-* En las [[HU] Notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/71), [[HU] Modificar correo electrónico de notificaciones](https://github.com/Jumacasni/Terrake/issues/72) y [[HU] Dejar de notificar por correo electrónico](https://github.com/Jumacasni/Terrake/issues/73) se ha avanzado la siguiente clase:
-  * [notificaciones.go](https://github.com/Jumacasni/Terrake/blob/main/src/notificaciones.go): encargada de almacenar los emails a los que se van a notificar los terremotos. Los emails se almacenan en un map cuya clave es el email del usuario y el valor es su nombre.
-  
-La estructura del directorio ``src`` está así actualmente:
-
+Para ejecutar los tests unitarios simplemente hacer:
+```shell
+$ make test
 ```
-├── monitor.go
-├── notificaciones.go
-├── terremoto
-│   ├── terremoto.go
-│   └── tipomagnitud
-│       └── tipoMagnitud.go
-```
-
-### Comprobación de la sintaxis
-
-Para la comprobación de que una clase está sintácticamente correcta se ha utilizado el comando ``gofmt -e <fichero.go>``, cuya salida indica los errores sintácticos encontrados.
 
 ## Licencia
 
