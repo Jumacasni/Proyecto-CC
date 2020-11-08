@@ -1,2 +1,5 @@
+"runner": "make"
+	
 test:
-	go test ./src/...
+	go test ./src/monitor
+	go test ./src/notificaciones
