@@ -143,8 +143,8 @@ func TestDeactivateEmailOk(t *testing.T){
 	emailExistsMock = func(email string) bool{
 		return true
 	}
-	checkEmailActivated := checkEmailActivatedMock{}
 	// Función mock, el email tiene las notificaciones activadas
+	checkEmailActivated := checkEmailActivatedMock{}
 	emailActivatedMock = func(email string) bool{
 		return true
 	}
@@ -177,8 +177,8 @@ func TestDeactivateEmailFail(t *testing.T){
 	emailExistsMock = func(email string) bool{
 		return true
 	}
-	checkEmailActivated := checkEmailActivatedMock{}
 	// Función mock, el email tiene las notificaciones desactivadas
+	checkEmailActivated := checkEmailActivatedMock{}
 	emailActivatedMock = func(email string) bool{
 		return false
 	}
