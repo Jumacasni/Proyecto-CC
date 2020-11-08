@@ -30,8 +30,6 @@ Se va a optar por ```go test``` y se va a desarrollar usando *Test Driven Develo
 
 ## Instrucciones
 
-buildtool: Makefile
-
 Para ejecutar los tests unitarios simplemente hacer:
 ```shell
 $ make test
