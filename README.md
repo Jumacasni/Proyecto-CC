@@ -16,11 +16,7 @@ La justificación de la biblioteca de aseriones se encuentra [aquí](https://git
 
 ## Marco de prueba
 
-Se analizan dos posibles marcos de prueba:
-* [go test](https://golang.org/pkg/testing/): viene por defecto en **Go**. No requiere librerías externas.
-* [godoc](https://github.com/cucumber/godog): creada para aplicar *Behavior Driven Development* en **Go**.
-
-Se va a optar por ```go test``` y se va a desarrollar usando *Test Driven Development*. Es cierto que BDD ayuda a entender mejor los tests y, cuando se trata de un proyecto grande en el que hay clientes que no entienden mucho de programación, puede mejorar la comunicación desarrollador-cliente, pero este proyecto es propio y no va a entregarse a nadie que no entienda de programación. Además, con TDD se consigue una mejor calidad de código, que es lo prioritario para mí.
+La justificación del marco de prueba se encuentra [aquí](https://github.com/Jumacasni/Terrake/blob/main/docs/marco_prueba.md).
 
 ## Instrucciones
 
