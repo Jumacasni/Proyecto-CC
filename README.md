@@ -8,11 +8,7 @@
 
 ## Gestor de tareas
 
-Al usar **Go** como lenguaje de programación, una característica de este lenguaje es que tiene un gestor de tareas implícito. A través del comando ```go <comando> [argumentos]``` se pueden ejecutar diferentes tareas como compilar e instalar paquetes y dependencias o ejecutar tests, entre otras. Todos los comandos que se pueden ejecutar con **Go** se encuentran en [esta sección](https://golang.org/cmd/go/) de su página web.
-
-Una alternativa muy potente al gestor implícito de Go es [realize](https://github.com/oxequa/realize). Añade la posibilidad de manejar diferentes proyectos a la misma vez y la posibilidad de ver los errores y logs en una web de forma más limpia.
-
-Como ahora mismo solo se tiene un proyecto y no considero necesario ver los errores y logs en la web, el **gestor de tareas implícito** sería más que suficiente para las tareas de este proyecto. El problema es que como va a haber varios archivos distribuidos en diferentes directorios, habría que hacer ```go test <directorio>``` y es incómodo. Por esta razón se ha decidido usar **Makefile**, que ejecutará los comandos de Go. De esta forma se puede hacer ```make test``` y con ello se ejecutará automáticamente ```go test ./src/monitor``` y ```go test ./src/notificaciones```, y es mucho más cómodo.
+La justificación del gestor de tareas se encuentra [aquí](https://github.com/Jumacasni/Terrake/blob/main/docs/gestion_tareas.md).
 
 ## Biblioteca de aserciones
 
