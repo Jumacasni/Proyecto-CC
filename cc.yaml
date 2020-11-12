@@ -1,10 +1,10 @@
 lenguaje: Go
 test:
-  - src/monitor/monitor_test.go
-  - src/notificaciones/notificaciones_test.go
-fichero_tareas: Makefile
+  - internal/monitor/monitor_test.go
+  - internal/notificaciones/notificaciones_test.go
+fichero_tareas: tusk.yml
 entidad:
-  - src/monitor/terremoto/tipomagnitud/tipoMagnitud.go
-  - src/monitor/terremoto/terremoto.go
-  - src/monitor/monitor.go
-  - src/notificaciones/notificaciones.go
+  - internal/monitor/terremoto/tipomagnitud/tipoMagnitud.go
+  - internal/monitor/terremoto/terremoto.go
+  - internal/monitor/monitor.go
+  - internal/notificaciones/notificaciones.go

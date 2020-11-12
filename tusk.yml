@@ -1,0 +1,4 @@
+tasks:
+  test:
+    usage: test notificaciones and monitor
+    run: cd internal/; go test ./monitor; go test ./notificaciones
