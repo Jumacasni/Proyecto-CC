@@ -45,7 +45,7 @@ De acuerdo a estos [estándares de Go](https://vsupalov.com/go-folder-structure/
 
 ## Clases avanzadas
 
-**No ha habido comentarios con respecto a esta rúbrica, con lo cual se ha dejado tal y como estaba**. Se puede consultar en [este enlace](https://github.com/Jumacasni/Terrake/blob/main/docs/clases_avanzadas_hito_2.md)
+**No ha habido comentarios con respecto a esta rúbrica, con lo cual se ha dejado tal y como estaba**. Se puede consultar en [este enlace](https://github.com/Jumacasni/Terrake/blob/main/docs/clases_avanzadas_milestone_2.md)
 
 ## Licencia
 
