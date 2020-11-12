@@ -16,12 +16,15 @@ tasks:
 ```
 
 Se puede ver la descripción y uso de la tarea con ``tusk <tarea> --help``:
+
 <img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/tusk1.png" width="55%" height="55%">
 
 Al ejecutar ``tusk test`` se muestra la siguiente salida:
+
 <img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/tusk2.png" width="55%" height="55%">
 
 El comando ejecutado podría simplificarse a ``cd internal; go test ./...``, pero de esta manera mostraría *warnings* de que hay ficheros que no tienen test, y estos ficheros realmente no los necesitan:
+
 <img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/tusk3.png" width="55%" height="55%">
 
 ### Task
@@ -37,9 +40,11 @@ tasks:
 ```
 
 Con el comando ``task <tarea> --summary`` se puede ver una descripción de la tarea:
+
 <img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/task2.png" width="55%" height="55%">
 
 Al ejecutar ``task test`` se muestra la siguiente salida:
+
 <img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/task1.png" width="55%" height="55%">
 
 ### Robo
@@ -51,9 +56,11 @@ test:
 ```
 
 Al ejecutar ``robo help <tarea>`` se muestra una descripción y uso de la tarea:
+
 <img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/robo1.png" width="55%" height="55%">
 
 Al ejecutar ``robo test`` se muestra la siguiente salida:
+
 <img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/robo2.png" width="55%" height="55%">
 
 ### Conclusiones
