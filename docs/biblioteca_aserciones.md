@@ -1,10 +1,10 @@
 ## Biblioteca de aserciones
 
-Se han visto dos alternativas:
-* [testing](https://golang.org/pkg/testing/): realmente no es una biblioteca de aserciones, si no que es un paquete de Go que proporciona herramientas para realizar tests. Se pueden encontrar funciones como ``t.Error()``, que devuelve un mensaje de error.
-* [assert](https://godoc.org/github.com/stretchr/testify/assert): una librería externa en la que podemos crear nuestros propios métodos de aserción como por ejemplo ``assertTrue``o ``assertEquals``, entre otros.
+Dentro de la biblioteca [**testify**](https://github.com/stretchr/testify) que proporciona **Go**, se encuentra el paquete [**testing**](https://golang.org/pkg/testing/) en el que podemos encontrar dos alternativas para testear:
+* Utilizar simplemente el paquete **testing** que proporciona herramientas para realizar tests. Se pueden encontrar funciones como ``t.Error()``, que devuelve un mensaje de error.
+* Utilizar el paquete **testing** y además la librería [**assert**](https://godoc.org/github.com/stretchr/testify/assert): una librería externa en la que podemos crear nuestros propios métodos de aserción como por ejemplo ``assertTrue``o ``assertEquals``, entre otros.
 
-### Testing
+### Paquete Testing
 
 Una función test que testea que se ha registrado un email en nuestro sistema es el siguiente:
 ```
@@ -32,7 +32,7 @@ En este ejemplo, se lanza un mensaje de error si después de insertar el email:
 * El número de emails registrados en el sistema es cero
 * El número de emails registrados en el sistema no es el número de emails que había antes de insertar el email + 1
 
-### Assert
+### Paquete Testing + Assert
 
 La misma función test de antes pero usando **assert**, quedaría así:
 
@@ -58,6 +58,6 @@ Hay que tener en cuenta que se debe importar la librería externa.
 
 ### Conclusiones
 
-La diferencia que puedo apreciar entre **Testing** y **Assert** es que con **Assert** se testea en una sola línea de código, mientras que en **Testing** se necesita un **if**. Personalmente, me gusta más el código que queda en **Testing** porque así se separa en líneas de código la condición de error y el mensaje enviado. En **Assert** todo va en la misma línea de código y me resulta menos visual.
+La diferencia que puedo apreciar entre las dos alternativas es que con **Assert** se testea en una sola línea de código, mientras que usando solo el paquete **Testing** se necesita un **if**. Personalmente, me gusta más el código que queda en la primera alternativa, porque así se separa en líneas de código la condición de error y el mensaje enviado. Usando **Assert** todo va en la misma línea de código y me resulta menos visual.
 
-Finalmente he decidido usar el paquete **Testing** por la razón anterior.
+Finalmente he decidido usar la primera alternativa por la razón que he dicho anteriormente.
