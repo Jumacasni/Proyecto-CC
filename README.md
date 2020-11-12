@@ -12,9 +12,7 @@ La justificación del gestor de tareas se encuentra [aquí](https://github.com/J
 
 ## Biblioteca de aserciones
 
-**Go** tiene su propia biblioteca de aserciones [testing](https://golang.org/pkg/testing/). Sin embargo, **Go** ha pensado en los programadores que vienen de otros lenguajes de programación y que siempre han usado *assertions*. De este modo, proporcionan la biblioteca [assert](https://godoc.org/github.com/stretchr/testify/assert).
-
-En este proyecto se va a usar su propia biblioteca **testing**, ya que en lugar de utilizar funciones específicas de aserciones, lo que hace es devolver un error cuando falla el test, y esto simplifica las pruebas.
+La justificación de la biblioteca de aseriones se encuentra [aquí](https://github.com/Jumacasni/Terrake/blob/main/docs/biblioteca_aserciones.md).
 
 ## Marco de prueba
 
