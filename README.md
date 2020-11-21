@@ -18,9 +18,10 @@
 
 ## Uso de contenedores
 
-* **r1** - [Elección del contenedor base](https://github.com/Jumacasni/Terrake/blob/hito3/docs/eleccion_contenedor_base.md)
-* **r2** - [Dockerfile](https://github.com/Jumacasni/Terrake/blob/hito3/docs/dockerfile.md)
-* **r3** - [Subida a Docker Hub y actualización automática](https://github.com/Jumacasni/Terrake/blob/hito3/docs/dockerhub.md)
+* **r1** - [Elección del contenedor base](https://github.com/Jumacasni/Terrake/blob/main/docs/eleccion_contenedor_base.md)
+* **r2** - [Dockerfile](https://github.com/Jumacasni/Terrake/blob/main/docs/dockerfile.md)
+* **r3** - [Subida a Docker Hub y actualización automática](https://github.com/Jumacasni/Terrake/blob/main/docs/dockerhub.md)
+* **r4** - [Subida a Docker Hub y actualización automática](https://github.com/Jumacasni/Terrake/blob/main/docs/githubcontainerregistry.md)
 
 ## Estructura del directorio y estándares seguidos
 
