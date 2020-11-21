@@ -38,6 +38,6 @@ FROM partlab/ubuntu-golang
 
 A continuación, se ha usado ``docker images`` para comprobar el tamaño de cada una y el resultado ha sido el siguiente:
 
-<img src="https://github.com/Jumacasni/Terrake/blob/hito3/docs/img/dockerfiles.png" width="60%" height="60%">
+<img src="https://github.com/Jumacasni/Terrake/blob/hito3/docs/img/dockerfiles.png" width="80%" height="80%">
 
 Tal y como se ve, la imagen base ``golang:1.15-alpine`` es la que menos pesa con un tamaño de 507MB, con lo cual esta es la imagen elegida.
