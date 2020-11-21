@@ -2,28 +2,25 @@
 
 **Autor:** Juan Manuel Castillo Nievas
 
+**Nota: este proyecto aún está en desarrollo**
+
+## Descripción y planificación del proyecto
+
 * [Descripción del proyecto](https://github.com/Jumacasni/Terrake/blob/main/docs/descripcion_proyecto.md)
 * [Arquitectura](https://github.com/Jumacasni/Terrake/blob/main/docs/arquitectura.md)
 * [Planificación](https://github.com/Jumacasni/Terrake/blob/main/docs/planificacion.md)
 
-## Gestor de tareas
+## Tests
 
-La justificación del gestor de tareas se encuentra [aquí](https://github.com/Jumacasni/Terrake/blob/main/docs/gestion_tareas.md).
+* **r1** - [Gestor de tareas](https://github.com/Jumacasni/Terrake/blob/main/docs/gestion_tareas.md)
+* **r2** - [Biblioteca de aserciones](https://github.com/Jumacasni/Terrake/blob/main/docs/biblioteca_aserciones.md)
+* **r3** - [Marco de prueba](https://github.com/Jumacasni/Terrake/blob/main/docs/marco_prueba.md)
 
-## Biblioteca de aserciones
+## Uso de contenedores
 
-La justificación de la biblioteca de aseriones se encuentra [aquí](https://github.com/Jumacasni/Terrake/blob/main/docs/biblioteca_aserciones.md).
-
-## Marco de prueba
-
-La justificación del marco de prueba se encuentra [aquí](https://github.com/Jumacasni/Terrake/blob/main/docs/marco_prueba.md).
-
-## Instrucciones
-
-Para ejecutar los tests unitarios simplemente hacer:
-```shell
-$ tusk test
-```
+* **r1** - [Elección del contenedor base](https://github.com/Jumacasni/Terrake/blob/hito3/docs/eleccion_contenedor_base.md)
+* **r2** - [Dockerfile](https://github.com/Jumacasni/Terrake/blob/hito3/docs/dockerfile.md)
+* **r3** - [Subida a Docker Hub y actualización automática](https://github.com/Jumacasni/Terrake/blob/hito3/docs/dockerhub.md)
 
 ## Estructura del directorio y estándares seguidos
 
@@ -42,10 +39,6 @@ De acuerdo a estos [estándares de Go](https://vsupalov.com/go-folder-structure/
 │       ├── notificaciones.go
 │       └── notificaciones_test.go
 ```
-
-## Clases avanzadas
-
-**No ha habido comentarios con respecto a esta rúbrica, con lo cual se ha dejado tal y como estaba**. Se puede consultar en [este enlace](https://github.com/Jumacasni/Terrake/blob/main/docs/clases_avanzadas_milestone_2.md)
 
 ## Licencia
 
