@@ -25,6 +25,10 @@ Para ejecutar los tests unitarios simplemente hacer:
 $ tusk test
 ```
 
+## Uso de contenedores
+
+* [Elección del contenedor base](https://github.com/Jumacasni/Terrake/blob/hito3/docs/eleccion_contenedor_base.md)
+
 ## Estructura del directorio y estándares seguidos
 
 De acuerdo a estos [estándares de Go](https://vsupalov.com/go-folder-structure/), en la carpeta ``internal/`` están los paquetes que son específicos de este proyecto. Además, los archivos de *unit test* están dentro del paquete donde está el código que se va a testear. La estructura del directorio está ahora mismo así:
