@@ -1,6 +1,6 @@
 ## Subida del contenedor a Docker Hub
 
-Para subir el contenedor creado a Docker Hub, se han seguido [estas instrucciones](https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html).
+Para subir el contenedor creado a **Docker Hub** se han seguido [estas instrucciones](https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html).
 
 **1.** Me he creado una cuenta en Docker Hub y he hecho login desde la terminal
 
@@ -28,6 +28,6 @@ Para que el contenedor se construya automáticamente cada vez que se actualice e
 
 <kbd><img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerhub5.png" width="80%" height="80%"></kbd>
 
-**4.** Para probarlo, se ha hecho ``push`` a la rama principal del repositorio y se puede ver como se lanza un nuevo **build** en cada actualización.
+**4.** Para probarlo, se ha hecho ``push`` a la rama principal del repositorio y se puede ver cómo se lanza un nuevo **build** en cada actualización.
 
 <kbd><img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerhub6.png" width="80%" height="80%"></kbd>
