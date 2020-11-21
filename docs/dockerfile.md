@@ -21,7 +21,7 @@ CMD ["tusk", "test"]
 
 En esta primera versión se han utilizado cuatro órdenes ``RUN`` para depurar. Una vez se haya depurado, se unirán en una misma orden. También se ha copiado el contenido de ``internal/`` que contiene los archivos ``.go`` y el archivo ``tusk.yml`` que lanza los tests. Se obtienen **11 capas**:
 
-<img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerfile-v1.png" width="80%" height="80%">
+<kbd><img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerfile-v1.png" width="80%" height="80%"></kbd>
 
 ---
 
@@ -46,7 +46,7 @@ CMD ["tusk", "test"]
 
 En esta segunda versión se han juntado las cuatro órdenes ``RUN`` en una misma orden. El número de capas es **8**:
 
-<img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerfile-v2.png" width="80%" height="80%">
+<kbd><img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerfile-v2.png" width="80%" height="80%"></kbd>
 
 ---
 
@@ -72,7 +72,7 @@ En esta última versión se han juntado las dos órdenes ``COPY`` en una misma o
 
 De esta forma se ahorra una capa, teniendo en total **7 capas**:
 
-<img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerfile-v3.png" width="80%" height="80%">
+<kbd><img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerfile-v3.png" width="80%" height="80%"></kbd>
 
 ---
 
@@ -80,6 +80,6 @@ De esta forma se ahorra una capa, teniendo en total **7 capas**:
 
 Se ha usado ``docker images`` para comprobar el tamaño que queda en cada dockerfile:
 
-<img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerfiles-v*.png" width="80%" height="80%">
+<kbd><img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerfiles-v*.png" width="80%" height="80%"></kbd>
 
 Aunque es cierto que el tamaño no ha variado, al seguir las [buenas prácticas](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) de Dockerfile se ha conseguido pasar de **11 capas** a **7 capas**.
