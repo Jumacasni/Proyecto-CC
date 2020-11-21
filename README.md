@@ -29,6 +29,7 @@ $ tusk test
 
 * [Elección del contenedor base](https://github.com/Jumacasni/Terrake/blob/hito3/docs/eleccion_contenedor_base.md)
 * [Dockerfile](https://github.com/Jumacasni/Terrake/blob/hito3/docs/dockerfile.md)
+* [Subida a Docker Hub y actualización automática](https://github.com/Jumacasni/Terrake/blob/hito3/docs/dockerhub.md)
 
 ## Estructura del directorio y estándares seguidos
 
