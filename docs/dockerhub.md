@@ -1,6 +1,6 @@
 ## Subida del contenedor a Docker Hub
 
-Para subir el contenedor creado a Docker Hub, se han seguido [estas instrucciones](https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html).
+Para subir el contenedor creado a **Docker Hub** se han seguido [estas instrucciones](https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html).
 
 **1.** Me he creado una cuenta en Docker Hub y he hecho login desde la terminal
 
