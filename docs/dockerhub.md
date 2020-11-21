@@ -28,6 +28,6 @@ Para que el contenedor se construya automáticamente cada vez que se actualice e
 
 <img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerhub5.png" width="80%" height="80%">
 
-**4.** Para probarlo, se ha hecho ``push`` a la rama principal del repositorio y se puede ver como se lanza un nuevo **build** en cada actualización.
+**4.** Para probarlo, se ha hecho ``push`` a la rama principal del repositorio y se puede ver cómo se lanza un nuevo **build** en cada actualización.
 
 <img src="https://github.com/Jumacasni/Terrake/blob/main/docs/img/dockerhub6.png" width="80%" height="80%">
