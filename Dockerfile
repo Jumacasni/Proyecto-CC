@@ -6,8 +6,7 @@ RUN apk --no-cache add curl \
 	&& apk add --no-cache build-base \
 	&& curl -sL https://git.io/tusk | bash -s -- -b /usr/local/bin latest
 
-COPY internal/ /terrake/internal/
-COPY tusk.yml /terrake
+COPY internal/ tusk.yml /terrake/
 
 WORKDIR /terrake
 

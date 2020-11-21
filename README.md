@@ -28,6 +28,7 @@ $ tusk test
 ## Uso de contenedores
 
 * [Elección del contenedor base](https://github.com/Jumacasni/Terrake/blob/hito3/docs/eleccion_contenedor_base.md)
+* [Dockerfile](https://github.com/Jumacasni/Terrake/blob/hito3/docs/dockerfile.md)
 
 ## Estructura del directorio y estándares seguidos
 
