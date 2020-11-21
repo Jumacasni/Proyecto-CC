@@ -70,7 +70,7 @@ CMD ["tusk", "test"]
 
 En esta última versión se han juntado las dos órdenes ``COPY`` en una misma orden. Esto implica que se debe modificar levemente el fichero ``tusk.yml`` eliminando la orden ``cd internal/`` que tenía originalmente, ya que no es necesaria puesto que está al mismo nivel que las carpetas ``monitor/`` y ``notificaciones/``. El fichero ``tusk.yml`` se puede consultar en [este enlace](https://github.com/Jumacasni/Terrake/blob/hito3/tusk.yml)
 
-De esta forma, se ahorra una capa, teniendo en total **7 capas**:
+De esta forma se ahorra una capa, teniendo en total **7 capas**:
 
 <img src="https://github.com/Jumacasni/Terrake/blob/hito3/docs/img/dockerfile-v3.png" width="60%" height="60%">
 
